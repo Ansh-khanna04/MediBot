@@ -1,0 +1,25 @@
+# Python
+.env
+.env.local
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# Vector DB (local data, no need to push)
+.chroma/
+chroma_db/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Node (for frontend later)
+node_modules/
+.next/
