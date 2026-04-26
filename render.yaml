@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: medibot-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: EURI_API_KEY
+        sync: false
+      - key: CHAT_MODEL_NAME
+        value: gpt-4.1-nano
+      - key: EMBEDDING_MODEL_NAME
+        value: sentence-transformers/all-mpnet-base-v2
+      - key: CHUNK_SIZE
+        value: 25
+      - key: CHUNK_OVERLAP
+        value: 5
